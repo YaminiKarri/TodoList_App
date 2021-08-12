@@ -75,28 +75,27 @@ const TodoItem = (props) => {
     console.log(todos)
 
     return (
-        <div>
-        hello
         <DragDropContext onDragEnd={()=>onDragEnd()}>
         <Droppable droppableId="droppable">{
-            (provided, snapshot)=>{
-                <div  {...provided.droppableProps} ref={provided.innerRef} style={getListStyle(snapshot.isDraggingOver)}>
+            (provided, snapshot)=>(
+                <div  {...provided.droppableProps} ref={provided.innerRef} //style={getListStyle(snapshot.isDraggingOver)}
+                >
                 {
                     
                     todos.map((item, index)=>{
 
                         return <>
                                                       
-                                <Draggable key={item.id} draggableId={item.id} index={index}>
+                                <Draggable key={item.id} draggableId={`key-${item.id}`} index={index}>
                                  {(provided,snapshot) => (
                                    <div
                                      ref={provided.innerRef}
                                      {...provided.draggableProps}
                                      {...provided.dragHandleProps}
-                                     style={getItemStyle(
-                                        snapshot.isDragging,
-                                        provided.draggableProps.style
-                                      )}
+                                    //  style={getItemStyle(
+                                    //     snapshot.isDragging,
+                                    //     provided.draggableProps.style
+                                    //   )}
                                     >
                                     {item.search === false  ?  
                                     <li key={item.id} className="card">
@@ -134,12 +133,11 @@ const TodoItem = (props) => {
                  }  
                 {provided.placeholder}
                </div>
-            }
+    )
         }
         
         </Droppable>
       </DragDropContext>
-      </div>
     )
 }
 
