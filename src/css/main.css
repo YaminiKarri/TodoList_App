@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+html{
+    line-height: 1.15;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'RocknRoll One', sans-serif;
+}
+
+body{
+    background-color: rgb(224, 237, 240);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    color: rgb(232, 243, 243);
+    background-image: linear-gradient(rgba(252, 247, 247, 0.5), rgba(244, 247, 248, 0.5)),url('https://wallpaperaccess.com/full/1783294.jpg');
+ 
+    
+}
+
+.App{
+    background: linear-gradient(
+        190deg, #075566 20%,
+         rgb(105, 234, 243) 80%   
+    );
+    margin-top: 4vh;
+    display: flex;
+    flex-direction: column; 
+   
+    width:50%;
+    margin-left: 420px;
+}
+
+.App h1{
+    display: inline;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    
+}
+
+.addTodos {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .todo-input {
+    min-width: 15rem;
+    width: 35vw;
+  
+    height: 7vh;
+    background-color: #e1ebfd;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin-left: 60px;
+    align-self: center;
+  }
+
+  .todo-input:focus {
+    outline: none;
+    border: 2px solid rgb(243, 243, 248);
+  }
+
+  .add-btn {
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background-color: #ffffff;
+    color: #151516;
+    border-radius: 50%;
+    border: 1px solid #e1ebfd;
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .displaytodos {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  
+  .displaytodos .buttons {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .displaytodos .buttons button {
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+  }
+
+  
+  .displaytodos .buttons button {
+    margin-right: 1rem;
+  }
+  
+  
+  .displaytodos ul {
+    list-style: none;
+    display: grid;
+    align-self:center;
+    flex-wrap: wrap;
+    margin-left: 5%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: rgb(243, 243, 247);
+    background: radial-gradient(
+      circle,
+      hsla(180, 64%, 87%, 0.9) 0%,
+      hsla(240, 100%, 100%, 0.9) 100%
+    );
+  
+    margin: 0 1rem 1rem 0;
+    height: 5rem;
+    width: 30rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  
+    position: relative;
+  }
+
+  
+  .card textarea {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #e1ebfd;
+    width:78%;
+    color: #151b1b;
+    height: 90%;
+  }
+  .card textarea:disabled {
+    background-color: transparent;
+  }
+  
+  .card .btns {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
+  
+  .card .btns button {
+    border-radius: 20%;
+    border: none;
+    margin: 0 0.6rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #0a5153;
+    background-color: transparent;
+  }
+  
+  .card .btns button:focus {
+    outline: none;
+    background-color: lightseagreen;
+  }
+  
+
+  .completed {
+    position: absolute;
+    right: 0.3rem;
+    top: 0.3rem;
+    background-color: #2e6855;
+    border: 1px solid #272727;
+    color: #e1ebfd;
+  
+    font-size: 0.8rem;
+    padding: 3px;
+    border-radius: 10px;
+  }
+  
+  
